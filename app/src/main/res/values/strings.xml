@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Day3-Tugas10</string>
+    <string name="image_login_screen">Image Login Screen</string>
+    <string name="email">Email</string>
+    <string name="login_text1">Selamat Datang</string>
+    <string name="login_text2">Silahkan melakukan Login untuk melanjutkan</string>
+    <string name="password">Password</string>
+    <string name="forgot_pass">Lupa Password ?</string>
+    <string name="login">Masuk</string>
+    <string name="login_by_google">Login By Google</string>
+    <string name="login_by_facebook">Login By Facebook</string>
+    <string name="desc_register">Belum punya akun ?</string>
+    <string name="register_now">Daftar Sekarang</string>
+    <string name="in_development">Dalam Pengembangan</string>
+    <string name="form_validation">Form ini wajib di isi</string>
+    <string name="wrong_email_format">Format Email tidak terdaftar</string>
+</resources>

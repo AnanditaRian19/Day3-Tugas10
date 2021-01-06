@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/image_login_screen"
+        android:src="@drawable/img_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lambo"
+        android:text="@string/login_text1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_login" />
+
+    <TextView
+        android:id="@+id/tv_login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/abaya"
+        android:text="@string/login_text2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_login1"
+        app:layout_constraintStart_toStartOf="@id/tv_login1"
+        app:layout_constraintTop_toBottomOf="@id/tv_login1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tip_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="60dp"
+        android:theme="@style/Login"
+        app:boxStrokeColor="@color/purple_500"
+        app:hintEnabled="false"
+        app:hintTextColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login2"
+        app:placeholderTextColor="@color/purple_500">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_form"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/segoeui"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="8dp"
+            android:singleLine="true"
+            android:textColor="@color/purple_500" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tip_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:theme="@style/Login"
+        app:backgroundTint="@color/purple_500"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_email"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/purple_500">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_form"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/segoeui"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="8dp"
+            android:singleLine="true"
+            android:textColor="@color/purple_500" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/forgot_pass"
+        app:layout_constraintEnd_toEndOf="@id/tip_password"
+        app:layout_constraintTop_toBottomOf="@id/tip_password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/iv_LoginByGoogle"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgotPass" />
+
+    <ImageView
+        android:id="@+id/iv_LoginByGoogle"
+        style="@style/logoPlaceholder"
+        android:contentDescription="@string/login_by_google"
+        android:src="@drawable/logo_google"
+        app:layout_constraintBottom_toBottomOf="@id/btn_login"
+        app:layout_constraintEnd_toStartOf="@id/iv_LoginByFacebook"
+        app:layout_constraintStart_toEndOf="@id/btn_login"
+        app:layout_constraintTop_toTopOf="@id/btn_login" />
+
+    <ImageView
+        android:id="@+id/iv_LoginByFacebook"
+        style="@style/logoPlaceholder"
+        android:contentDescription="@string/login_by_facebook"
+        android:src="@drawable/logo_facebook"
+        app:layout_constraintBottom_toBottomOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_LoginByGoogle"
+        app:layout_constraintTop_toTopOf="@id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_DescRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/desc_register"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24sp"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/register_now"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:id="@+id/wave1"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave2"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register"
+        app:layout_constraintVertical_bias="1" />
+
+    <View
+        android:id="@+id/wave2"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:alpha="0.6"
+        android:background="@drawable/ic_wave2"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
